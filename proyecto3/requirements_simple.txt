@@ -1,0 +1,3 @@
+# Dependencias opcionales para la herramienta de expresiones regulares
+# PyQt6==6.6.1  # Descomentar si se quiere usar la interfaz PyQt6
+# Nota: Tkinter viene incluido con Python, no necesita instalación
