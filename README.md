@@ -20,17 +20,23 @@ LARA-PROJECTS/
 
 ## Configuración rápida
 
-1. **Instala todas las dependencias de Python con un solo comando:**
+<div style="background-color: #f4f4f4; padding: 10px; border-radius: 5px;">
+<pre>
+<code style="color: #333; font-family: Consolas, monospace;">
+# Clona el repositorio
+git clone git@github.com:derekCmorales/LARA-PROJECTS.git
 
-   ```bash
-   pip install -r requirements.txt
-   ```
+# Instala las dependencias
 
-2. **Ejecuta el menú principal:**
+pip install -r [requirements.txt](http://_vscodecontentref_/8)
 
-   ```bash
-   python3 main.py
-   ```
+# Ejecuta el menú principal
+
+python3 [main.py](http://_vscodecontentref_/9)
+</code>
+
+</pre>
+</div>
 
 ## Dependencias
 
@@ -73,6 +79,8 @@ Aplicación PyQt5 que centraliza los accesos a cada proyecto.
   y ruta.
 - Puede abrirse directamente desde un navegador o a través del menú principal.
 
-# By Derek Calderón, Adrián Matul & Diego Ovalle
+By Derek Calderón, Adrián Matul & Diego Ovalle
 
-![logo](logo.png)
+<div style="text-align: center;">
+  <img src="logolara.png" alt="logo" />
+</div>
