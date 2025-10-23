@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Visualizador del Algoritmo de Dijkstra</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header>
+    <h1>Visualizador del Algoritmo de Dijkstra</h1>
+    <p>Construye un grafo ponderado y obtén las distancias mínimas desde un nodo
+      origen.</p>
+  </header>
+
+  <main>
+    <section class="panel">
+      <h2>Gestión de nodos</h2>
+      <form id="node-form">
+        <label for="node-name">Nombre del nodo</label>
+        <input id="node-name" type="text" maxlength="20" required placeholder="Ej. A" />
+        <button type="submit">Agregar nodo</button>
+      </form>
+      <p class="hint">Los nombres no pueden repetirse y se distinguen por mayúsculas/minúsculas.</p>
+    </section>
+
+    <section class="panel">
+      <h2>Gestión de aristas dirigidas</h2>
+      <form id="edge-form">
+        <div class="form-row">
+          <label for="edge-from">Origen</label>
+          <select id="edge-from"></select>
+        </div>
+        <div class="form-row">
+          <label for="edge-to">Destino</label>
+          <select id="edge-to"></select>
+        </div>
+        <div class="form-row">
+          <label for="edge-weight">Peso</label>
+          <input id="edge-weight" type="number" step="0.01" min="0" required />
+        </div>
+        <button type="submit">Agregar arista</button>
+      </form>
+      <p class="hint">Las aristas son dirigidas. Agrega la arista inversa si deseas un grafo no dirigido.</p>
+    </section>
+
+    <section class="panel">
+      <h2>Ejecutar algoritmo</h2>
+      <div class="form-row">
+        <label for="start-node">Nodo de inicio</label>
+        <select id="start-node"></select>
+      </div>
+      <div class="actions">
+        <button id="run-btn">Ejecutar Dijkstra</button>
+        <button id="reset-btn" class="secondary">Limpiar todo</button>
+      </div>
+      <div class="form-row">
+        <label for="graph-json">Exportar / Importar JSON</label>
+        <textarea id="graph-json" rows="4" placeholder='{"nodes":["A","B"],"edges":[{"from":"A","to":"B","weight":5}]}'></textarea>
+        <div class="actions">
+          <button id="export-btn" type="button" class="secondary">Exportar</button>
+          <button id="import-btn" type="button" class="secondary">Importar</button>
+        </div>
+      </div>
+    </section>
+
+    <section class="panel">
+      <h2>Resumen del grafo</h2>
+      <div id="summary"></div>
+    </section>
+
+    <section class="panel">
+      <h2>Resultado</h2>
+      <div id="result"></div>
+    </section>
+  </main>
+
+  <div id="message" role="status" aria-live="polite"></div>
+
+  <footer>
+    <p>Proyecto académico &mdash; Implementación en JavaScript del algoritmo de Dijkstra.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

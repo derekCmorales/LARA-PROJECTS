@@ -1,12 +1,46 @@
+import os
 import sys
 import subprocess
 import webbrowser
+from pathlib import Path
+from urllib.parse import urlparse
+
+from dotenv import load_dotenv
 from PyQt5.QtWidgets import (
     QApplication, QWidget, QLabel, QPushButton, QVBoxLayout, QSpacerItem,
-    QSizePolicy, QHBoxLayout, QFrame
+    QSizePolicy, QHBoxLayout
 )
 from PyQt5.QtGui import QFont, QPixmap, QColor, QPalette, QLinearGradient, QBrush
 from PyQt5.QtCore import Qt
+
+
+BASE_DIR = Path(__file__).resolve().parent
+
+
+def load_configuration():
+    load_dotenv()
+    interpreter = os.getenv("PYTHON_INTERPRETER")
+    if not interpreter:
+        interpreter = sys.executable if sys.executable else "python3"
+
+    raw_url = os.getenv("DIJKSTRA_WEB_URL", "proyecto4/index.html")
+    parsed = urlparse(raw_url)
+
+    if parsed.scheme and parsed.scheme != "file":
+        resolved_url = raw_url
+    else:
+        candidate = Path(raw_url)
+        if not candidate.is_absolute():
+            candidate = BASE_DIR / candidate
+        if candidate.exists():
+            resolved_url = candidate.resolve().as_uri()
+        else:
+            resolved_url = raw_url
+
+    return interpreter, resolved_url
+
+
+PYTHON_INTERPRETER, DIJKSTRA_URL = load_configuration()
 
 
 class MainMenu(QWidget):
@@ -110,16 +144,16 @@ class MainMenu(QWidget):
         self.setLayout(main_layout)
 
     def run_proyecto1(self):
-        subprocess.Popen(["python3", "proyecto1/main.py"])
+        subprocess.Popen([PYTHON_INTERPRETER, "proyecto1/main.py"])
 
     def run_proyecto2(self):
-        subprocess.Popen(["python3", "proyecto2/main.py"])
+        subprocess.Popen([PYTHON_INTERPRETER, "proyecto2/main.py"])
 
     def run_proyecto3(self):
-        subprocess.Popen(["python3", "proyecto3/regex_gui.py"])
+        subprocess.Popen([PYTHON_INTERPRETER, "proyecto3/regex_gui.py"])
 
     def open_web(self):
-        webbrowser.open("https://dijkstra-algorithm-visualizer-sigma.vercel.app")
+        webbrowser.open(DIJKSTRA_URL)
 
 
 if __name__ == "__main__":
