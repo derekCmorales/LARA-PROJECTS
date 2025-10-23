@@ -1,4 +1,4 @@
-# LARA Projects
+![header](header.png)
 
 Colección de cuatro proyectos desarrollados durante el semestre y un lanzador
 principal con interfaz gráfica. El menú principal permite abrir cada proyecto
@@ -21,17 +21,13 @@ LARA-PROJECTS/
 ## Configuración rápida
 
 1. **Instala todas las dependencias de Python con un solo comando:**
+
    ```bash
    pip install -r requirements.txt
    ```
-2. **(Opcional) Define variables de entorno:**
-   - El menú principal lee `PYTHON_INTERPRETER` y `DIJKSTRA_WEB_URL` si están
-     definidos en tu entorno o en un archivo `.env` que puedes crear en la raíz
-     del proyecto.
-   - `PYTHON_INTERPRETER` permite ajustar la ruta del ejecutable de Python.
-   - `DIJKSTRA_WEB_URL` indica el recurso que se abrirá al lanzar el
-     visualizador de Dijkstra (por defecto `proyecto4/index.html`).
-3. **Ejecuta el menú principal:**
+
+2. **Ejecuta el menú principal:**
+
    ```bash
    python3 main.py
    ```
@@ -77,4 +73,6 @@ Aplicación PyQt5 que centraliza los accesos a cada proyecto.
   y ruta.
 - Puede abrirse directamente desde un navegador o a través del menú principal.
 
-## By Derek Calderón, Adrián Matul & Diego Ovalle
+# By Derek Calderón, Adrián Matul & Diego Ovalle
+
+![logo](logo.png)
