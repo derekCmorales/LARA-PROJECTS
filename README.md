@@ -20,23 +20,23 @@ LARA-PROJECTS/
 
 ## Configuración rápida
 
-<div style="background-color: #f4f4f4; padding: 10px; border-radius: 5px;">
-<pre>
-<code style="color: #333; font-family: Consolas, monospace;">
-# Clona el repositorio
-git clone git@github.com:derekCmorales/LARA-PROJECTS.git
+1. **Clona el repositorio desde la consola con el siguiente comando:**
 
-# Instala las dependencias
+   ```bash
+   git clone git@github.com:derekCmorales/LARA-PROJECTS.git
+   ```
 
-pip install -r [requirements.txt](http://_vscodecontentref_/8)
+2. **Instala todas las dependencias de Python con un solo comando:**
 
-# Ejecuta el menú principal
+   ```bash
+   pip install -r requirements.txt
+   ```
 
-python3 [main.py](http://_vscodecontentref_/9)
-</code>
+3. **Ejecuta el menú principal:**
 
-</pre>
-</div>
+   ```bash
+   python3 main.py
+   ```
 
 ## Dependencias
 
