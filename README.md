@@ -56,31 +56,34 @@ Aplicación PyQt5 que centraliza los accesos a cada proyecto.
 ### Proyecto 1 — Generador de tablas de verdad (`proyecto1/`)
 
 - Construido con PySide6.
+
 - Genera tablas de verdad a partir de expresiones booleanas.
+
 - Permite exportar resultados en formatos CSV y JSON.
 
 ### Proyecto 2 — Simplificación booleana (`proyecto2/`)
 
 - Basado en PyQt6 y `sympy`.
+
 - Simplifica expresiones booleanas mostrando los pasos principales del proceso.
 
 ### Proyecto 3 — Analizador de expresiones regulares (`proyecto3/`)
 
 - Implementado con PyQt6.
+
 - Destaca coincidencias en texto, evalúa patrones y valida expresiones en
   tiempo real.
 
 ### Proyecto 4 — Visualizador web de Dijkstra (`proyecto4/`)
 
-- Interfaz web estática (HTML, CSS y TypeScript) para construir grafos dirigidos
-  con pesos no negativos.
-- Permite añadir nodos y aristas, importar/exportar el grafo como JSON y
-  ejecutar el algoritmo de Dijkstra para mostrar distancias mínimas, predecesor
-  y ruta.
-- Puede abrirse directamente desde un navegador o a través del menú principal.
+-Aplicación web construida con Next.js y React, estilizada con Tailwind CSS y componentes MUI para ejecutar la visualización directamente en el navegador.
+
+-Vista principal con encabezado, lienzo y cola de prioridad dispuestos en una sola pantalla, coordinados por el hook useDraw que inicializa el grafo, el lienzo y la lógica de la simulación.
+
+-Interacciones guiadas para crear y editar el grafo (doble clic para vértices, arrastre con Shift para aristas, eliminar con Delete) junto con controles para elegir el vértice inicial, lanzar o reiniciar la visualización, cargar un ejemplo, ajustar la velocidad y consultar la cola de prioridad y el estado de pausa.
 
 By Derek Calderón, Adrián Matul & Diego Ovalle
 
-<div style="text-align: center;">
-  <img src="logolara.png" alt="logo" />
+<div align="center">
+  <img src="laraerp.png">
 </div>
