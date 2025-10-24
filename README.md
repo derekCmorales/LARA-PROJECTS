@@ -74,7 +74,7 @@ Aplicación PyQt5 que centraliza los accesos a cada proyecto.
 - Destaca coincidencias en texto, evalúa patrones y valida expresiones en
   tiempo real.
 
-### Proyecto 4 — Visualizador web de Dijkstra (`proyecto4/`)
+### Proyecto 4 — Visualizador web de Dijkstra
 
 -Aplicación web construida con Next.js y React, estilizada con Tailwind CSS y componentes MUI para ejecutar la visualización directamente en el navegador.
 
